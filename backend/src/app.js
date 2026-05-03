@@ -10,7 +10,7 @@ const app = express();
 // 1. CORS (Must be at the top to handle preflight OPTIONS requests)
 app.use(
     cors({
-        origin: [process.env.CLIENT_URL, "http://localhost:5173", "http://127.0.0.1:5173"],
+        origin: [process.env.CLIENT_URL, "http://localhost:5173", "https://alta-silk.vercel.app", "http://127.0.0.1:5173"],
         credentials: true,
         methods: ["GET", "POST", "PUT", "DELETE", "PATCH", "OPTIONS"],
         allowedHeaders: ["Content-Type", "Authorization", "X-Requested-With", "Accept", "Origin"],
