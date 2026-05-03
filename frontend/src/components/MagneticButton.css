@@ -1,0 +1,52 @@
+.magnetic-btn {
+  position: relative;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 10px;
+  background: transparent;
+  border: 1px solid white;
+  border-radius: 999px;
+  padding: 14px 32px;
+  font-size: 13px;
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+  font-weight: 500;
+  color: white;
+  cursor: pointer;
+  overflow: hidden;
+  transition: border-color 0.3s ease;
+  outline: none;
+  font-family: inherit;
+  z-index: 1;
+}
+
+.magnetic-btn.filled {
+  background: white;
+  color: black;
+}
+
+.btn-fill {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  height: 0;
+  background: white;
+  z-index: -1;
+  pointer-events: none;
+}
+
+.btn-text,
+.btn-icon {
+  position: relative;
+  z-index: 2;
+  pointer-events: none;
+}
+
+.btn-icon {
+  font-size: 16px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}

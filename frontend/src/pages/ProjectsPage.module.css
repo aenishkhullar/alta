@@ -1,0 +1,50 @@
+.page { background: #000; min-height: 100vh; padding: 0 48px 120px; font-family: 'Helvetica Neue', system-ui, sans-serif; }
+
+.hero { padding: 120px 0 64px; }
+.label { font-size: 12px; color: #cc3333; letter-spacing: 0.25em; text-transform: uppercase; margin-bottom: 16px; }
+.title { font-size: clamp(52px, 8vw, 96px); font-weight: 900; color: #fff; line-height: 0.88; letter-spacing: -0.03em; text-transform: uppercase; }
+.title span { color: #cc3333; }
+.subtitle { font-size: 15px; color: rgba(255,255,255,0.4); margin-top: 24px; max-width: 420px; line-height: 1.7; }
+
+.filters { display: flex; gap: 8px; margin-bottom: 72px; flex-wrap: wrap; }
+.filterBtn { padding: 10px 22px; border-radius: 999px; border: 1px solid rgba(255,255,255,0.15); background: transparent; color: rgba(255,255,255,0.5); font-size: 12px; letter-spacing: 0.1em; text-transform: uppercase; cursor: pointer; transition: all 0.2s; font-family: inherit; }
+.filterBtn:hover { border-color: rgba(255,255,255,0.4); color: #fff; }
+.filterBtn.active { background: #cc3333; border-color: #cc3333; color: #fff; }
+
+.project { display: grid; grid-template-columns: 1fr 1fr; gap: 0 64px; padding: 80px 0; border-top: 1px solid rgba(255,255,255,0.08); align-items: start; }
+.project:first-of-type { border-top: none; }
+
+.projNum { font-size: 11px; color: rgba(255,255,255,0.2); letter-spacing: 0.2em; text-transform: uppercase; margin-bottom: 16px; }
+.projCat { display: inline-block; font-size: 10px; padding: 4px 12px; border-radius: 999px; border: 1px solid rgba(180,30,30,0.4); color: #cc3333; letter-spacing: 0.1em; text-transform: uppercase; margin-bottom: 20px; }
+.projName { font-size: clamp(28px, 4vw, 48px); font-weight: 900; color: #fff; line-height: 1.0; letter-spacing: -0.02em; text-transform: uppercase; margin-bottom: 20px; }
+.projDesc { font-size: 14px; color: rgba(255,255,255,0.5); line-height: 1.8; margin-bottom: 32px; max-width: 400px; }
+
+.stack { display: flex; flex-wrap: wrap; gap: 6px; margin-bottom: 36px; }
+.stackTag { font-size: 10px; padding: 5px 12px; border-radius: 6px; background: rgba(255,255,255,0.05); border: 1px solid rgba(255,255,255,0.1); color: rgba(255,255,255,0.55); letter-spacing: 0.06em; text-transform: uppercase; }
+
+.liveBtn { display: inline-flex; align-items: center; gap: 10px; padding: 14px 28px; border-radius: 999px; border: 1px solid rgba(255,255,255,0.25); color: #fff; font-size: 12px; letter-spacing: 0.12em; text-transform: uppercase; cursor: pointer; background: transparent; font-family: inherit; transition: all 0.3s; position: relative; overflow: hidden; text-decoration: none; }
+.liveBtnFill { position: absolute; left: 0; bottom: 0; width: 0; height: 100%; background: #cc3333; transition: width 0.35s cubic-bezier(0.16,1,0.3,1); z-index: 0; }
+.liveBtn:hover .liveBtnFill { width: 100%; }
+.liveBtn:hover { border-color: #cc3333; }
+.liveBtnText { position: relative; z-index: 1; }
+.liveBtnIcon { position: relative; z-index: 1; flex-shrink: 0; }
+
+.screenshots { display: flex; flex-direction: column; gap: 16px; }
+.ssMain { width: 100%; aspect-ratio: 16/10; background: #0d0d0d; border-radius: 12px; border: 1px solid rgba(255,255,255,0.08); overflow: hidden; position: relative; display: flex; align-items: center; justify-content: center; padding: 20px; }
+.ssMain img { max-width: 100%; max-height: 100%; object-fit: contain; width: auto; height: auto; }
+.ssFallback { width: 100%; height: 100%; background: #0d0d0d; display: flex; align-items: center; justify-content: center; color: rgba(255,255,255,0.1); font-size: 12px; letter-spacing: 0.1em; }
+.ssBar { position: absolute; top: 0; left: 0; right: 0; height: 32px; background: rgba(255,255,255,0.04); display: flex; align-items: center; padding: 0 12px; gap: 6px; z-index: 2; }
+.dot { width: 8px; height: 8px; border-radius: 50%; }
+.ssThumbs { display: grid; grid-template-columns: 1fr 1fr; gap: 12px; }
+.ssThumb { aspect-ratio: 16/10; border-radius: 8px; border: 1px solid rgba(255,255,255,0.06); overflow: hidden; cursor: pointer; transition: border-color 0.2s; background: #0d0d0d; display: flex; align-items: center; justify-content: center; padding: 10px; }
+.ssThumb:hover { border-color: rgba(180,30,30,0.4); }
+.ssThumb img { max-width: 100%; max-height: 100%; object-fit: contain; width: auto; height: auto; }
+
+
+.ssThumbFallback { width: 100%; height: 100%; background: #0d0d0d; display: flex; align-items: center; justify-content: center; color: rgba(255,255,255,0.12); font-size: 9px; letter-spacing: 0.1em; text-transform: uppercase; }
+
+@media (max-width: 768px) {
+  .page { padding: 0 24px 80px; }
+  .project { grid-template-columns: 1fr; gap: 40px; }
+  .screenshots { order: -1; }
+}
