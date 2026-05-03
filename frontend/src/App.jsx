@@ -17,6 +17,7 @@ import resumeFile from './assets/Aenish_Resume.pdf';
 import ProjectsPage from './pages/ProjectsPage';
 import ServicesPage from './pages/ServicesPage';
 import LoginPage from './pages/LoginPage';
+import RegisterPage from './pages/RegisterPage';
 import ProtectedRoute from './components/ProtectedRoute';
 import AdminDashboard from './pages/AdminDashboard';
 import ScrollToHash from './components/ScrollToHash';
@@ -82,6 +83,7 @@ function App() {
           <Route path="/projects" element={<ProjectsPage />} />
           <Route path="/services" element={<ServicesPage />} />
           <Route path="/login" element={<LoginPage />} />
+          <Route path="/register" element={<RegisterPage />} />
           
           {/* Phase 2 — Admin dashboard */}
           <Route path="/admin" element={
