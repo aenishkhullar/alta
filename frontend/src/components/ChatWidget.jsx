@@ -1,4 +1,5 @@
 import React, { useState, useRef, useEffect } from 'react';
+import api from '../api/axios';
 
 const ChatWidget = () => {
   const [isOpen, setIsOpen] = useState(false);
@@ -45,13 +46,11 @@ const ChatWidget = () => {
       }));
 
     try {
-      const response = await fetch(`${import.meta.env.VITE_API_URL}/chat/message`, {
-        method: 'POST',
-        headers: { 'Content-Type': 'application/json' },
-        body: JSON.stringify({ message: trimmed, history })
-      });
-      const data = await response.json();
-      setMessages(prev => [...prev, { role: 'model', text: data.reply || 'Sorry, I could not get a response.' }]);
+      const { data } = await api.post('/chat/message', { message: trimmed, history });
+      setMessages(prev => [...prev, { 
+        role: 'model', 
+        text: data.reply || 'Sorry, I could not get a response.' 
+      }]);
     } catch {
       setMessages(prev => [...prev, { role: 'model', text: 'Something went wrong. Please try again.' }]);
     } finally {
