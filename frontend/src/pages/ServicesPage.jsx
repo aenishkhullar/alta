@@ -12,10 +12,10 @@ const SERVICES = [
     desc: 'Pixel-perfect marketing site with stunning design, smooth animations, and a contact form. Ideal for agencies, personal brands, and businesses.',
     includes: ['4 Sections per page','Contact Form','Mobile Responsive','GSAP Animations','SEO Ready'],
     basePrice: 35000,
-    basePagesIncluded: 1,
+    basePagesIncluded: 2,
     extraPagePrice: 5000,
     hasPages: true,
-    defaultPages: 1,
+    defaultPages: 2,
     addons: []
   },
   {
@@ -24,8 +24,8 @@ const SERVICES = [
     name: 'Web App',
     badges: ['pop', 'hot'],
     desc: 'Full-stack MERN application with authentication, dashboard, and scalable backend. Built for startups and SaaS products.',
-    includes: ['4 Pages','Contact Form','JWT Authentication','Basic Animations','MERN Stack','REST API'],
-    basePrice: 250000,
+    includes: ['4 Pages','Contact Form','JWT Authentication','Statistics dashboard + admin control system','Basic Animations','MERN Stack','REST API'],
+    basePrice: 150000,
     basePagesIncluded: 4,
     extraPagePrice: 7500,
     hasPages: true,
