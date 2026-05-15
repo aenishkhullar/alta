@@ -1,9 +1,11 @@
 import React, { useState, useEffect } from 'react';
+import { useNavigate } from 'react-router-dom';
 import { useAuth } from '../context/AuthContext';
 import api from '../api/axios';
 
 const AdminDashboard = () => {
   const { user, logout } = useAuth();
+  const navigate = useNavigate();
   const [enquiries, setEnquiries] = useState([]);
   const [loading, setLoading] = useState(true);
   const [selected, setSelected] = useState(null);
@@ -101,6 +103,24 @@ const AdminDashboard = () => {
           <span style={{ fontSize: '13px', color: 'rgba(255,255,255,0.6)' }}>
             Logged in as: <strong style={{ color: '#fff' }}>{user?.name}</strong> — {user?.email}
           </span>
+          <button
+            onClick={() => navigate('/crm')}
+            style={{
+              background: 'rgba(204,51,51,0.12)',
+              border: '1px solid rgba(204,51,51,0.3)',
+              color: '#cc3333',
+              padding: '8px 18px',
+              borderRadius: '8px',
+              fontSize: '11px',
+              textTransform: 'uppercase',
+              letterSpacing: '0.2em',
+              fontWeight: '700',
+              cursor: 'pointer',
+              marginRight: '12px'
+            }}
+          >
+            CRM →
+          </button>
           <button 
             onClick={logout}
             style={{

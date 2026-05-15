@@ -20,6 +20,7 @@ import LoginPage from './pages/LoginPage';
 import RegisterPage from './pages/RegisterPage';
 import ProtectedRoute from './components/ProtectedRoute';
 import AdminDashboard from './pages/AdminDashboard';
+import CRMPage from './pages/CRMPage';
 import ScrollToHash from './components/ScrollToHash';
 
 gsap.registerPlugin(ScrollTrigger);
@@ -89,6 +90,12 @@ function App() {
           <Route path="/admin" element={
             <ProtectedRoute requiredRole="admin">
               <AdminDashboard />
+            </ProtectedRoute>
+          } />
+
+          <Route path="/crm" element={
+            <ProtectedRoute requiredRole="admin">
+              <CRMPage />
             </ProtectedRoute>
           } />
         </Routes>

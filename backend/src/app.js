@@ -4,6 +4,7 @@ import cookieParser from "cookie-parser";
 import authRoutes from './routes/authRoutes.js';
 import enquiryRoutes from './routes/enquiryRoutes.js';
 import chatRoutes from './routes/chatRoutes.js';
+import clientRoutes from './routes/clientRoutes.js';
 
 const app = express();
 
@@ -24,6 +25,7 @@ app.use(cookieParser());
 app.use('/api/auth', authRoutes);
 app.use('/api/enquiry', enquiryRoutes);
 app.use('/api/chat', chatRoutes);
+app.use('/api/clients', clientRoutes);
 
 app.get("/", (req, res) => {
     res.send("API Running");
