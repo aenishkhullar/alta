@@ -9,11 +9,16 @@ gsap.registerPlugin(ScrollTrigger);
 
 import projects from '../data/projects';
 
+const featuredProjectNames = ["UniMart", "Yantra", "LifeSync", "The Dream Designer"];
+
 
 const ProjectsSection = ({ MagneticButton }) => {
   const sectionRef = useRef(null);
   const cardsRef = useRef([]);
   const navigate = useNavigate();
+  const featuredProjects = projects.filter((project) =>
+    featuredProjectNames.includes(project.name)
+  );
 
   useGSAP(
     () => {
@@ -59,7 +64,7 @@ const ProjectsSection = ({ MagneticButton }) => {
   );
 
   // Scroll container height = number of cards × 150vh for dwell time
-  const scrollHeight = `${projects.length * 150}vh`;
+  const scrollHeight = `${featuredProjects.length * 150}vh`;
 
   return (
     <section ref={sectionRef} className="relative bg-black" id="work">
@@ -76,7 +81,7 @@ const ProjectsSection = ({ MagneticButton }) => {
 
       {/* ── Scroll container — gives each card 150vh of dwell time ── */}
       <div className="relative px-4 md:px-16" style={{ height: scrollHeight }}>
-        {projects.map((project, index) => (
+        {featuredProjects.map((project, index) => (
           <div
             key={project.id}
             ref={(el) => (cardsRef.current[index] = el)}

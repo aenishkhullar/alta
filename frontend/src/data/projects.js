@@ -22,6 +22,10 @@ import splashersMain from '../assets/splashers_main.png';
 import splashers1 from '../assets/splashers_1.png';
 import splashers2 from '../assets/splashers_2.png';
 
+import dreamDesignerMain from '../assets/dreamdesigner_main.png';
+import dreamDesigner1 from '../assets/dreamdesigner_1.png';
+import dreamDesigner2 from '../assets/dreamdesigner_2.png';
+
 const projects = [
   {
     id: 1,
@@ -65,6 +69,19 @@ const projects = [
   {
     id: 4,
     num: '04',
+    name: "The Dream Designer",
+    category: "webapp",
+    categoryLabel: "Web App",
+    tech: ["React", "Express", "Node", "MongoDB", "JWT", "Resend"],
+    description: "A complete digital platform for architects and interior designers. It combines a polished portfolio website with a client management app for tracking customer projects, payments, invoices, timelines, and design assets in one organized workspace.",
+    mainImage: dreamDesignerMain,
+    screenshots: [dreamDesignerMain, dreamDesigner1, dreamDesigner2],
+    liveUrl: "https://github.com/aenishkhullar/the-dream-designer",
+    stickyTop: 180,
+  },
+  {
+    id: 5,
+    num: '05',
     name: "TravelEase",
     category: "website",
     categoryLabel: "Website",
@@ -73,11 +90,11 @@ const projects = [
     mainImage: travelEaseMain,
     screenshots: [travelEaseMain, travelEase1, travelEase2],
     liveUrl: "https://github.com/aenishkhullar/travelease",
-    stickyTop: 180,
+    stickyTop: 200,
   },
   {
-    id: 5,
-    num: '05',
+    id: 6,
+    num: '06',
     name: "Splashers",
     category: "landing",
     categoryLabel: "Landing Page",
@@ -86,11 +103,11 @@ const projects = [
     mainImage: splashersMain,
     screenshots: [splashersMain, splashers1, splashers2],
     liveUrl: "https://github.com/aenishkhullar/splashers",
-    stickyTop: 200,
+    stickyTop: 220,
   },
   {
-    id: 6,
-    num: '06',
+    id: 7,
+    num: '07',
     name: "Innings Lab",
     category: "landing",
     categoryLabel: "Landing Page",
@@ -99,7 +116,7 @@ const projects = [
     mainImage: inningsLabMain,
     screenshots: [inningsLabMain, inningsLab1, inningsLab2],
     liveUrl: "https://github.com/aenishkhullar/innings-lab",
-    stickyTop: 220,
+    stickyTop: 240,
   },
 ];
 

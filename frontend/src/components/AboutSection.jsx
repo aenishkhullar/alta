@@ -134,7 +134,7 @@ const AboutSection = ({ resumeUrl = "#", MagneticButton }) => {
           ref={paragraphRef}
           className="text-[rgba(255,255,255,0.55)] text-center text-[16px] leading-[1.8] max-w-[600px] mt-[40px] mx-auto"
         >
-          I'm a MERN stack developer and creative technologist based in India.
+          I'm a full stack developer and creative technologist based in India.
           I focus on crafting smooth, animated front-end experiences backed by 
           modern tools. From minimal landing pages to immersive 3D product sites,
           I bring ideas to life. My work blends clean code with creative direction.
@@ -146,7 +146,7 @@ const AboutSection = ({ resumeUrl = "#", MagneticButton }) => {
           className="flex flex-col sm:flex-row items-center justify-center gap-8 sm:gap-12 mt-16 text-center w-full"
         >
           <div className="flex flex-col items-center">
-            <span className="text-[48px] font-bold text-white leading-none">4+</span>
+            <span className="text-[48px] font-bold text-white leading-none">8+</span>
             <span className="text-[12px] text-white/50 uppercase tracking-wider mt-2">Projects Delivered</span>
           </div>
           
@@ -154,7 +154,7 @@ const AboutSection = ({ resumeUrl = "#", MagneticButton }) => {
           <div className="block sm:hidden w-[50px] h-[1px] bg-white/10"></div>
           
           <div className="flex flex-col items-center">
-            <span className="text-[48px] font-bold text-white leading-none">1+</span>
+            <span className="text-[48px] font-bold text-white leading-none">2.5+</span>
             <span className="text-[12px] text-white/50 uppercase tracking-wider mt-2">Years Building</span>
           </div>
           
